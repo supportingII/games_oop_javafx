@@ -16,16 +16,15 @@ public class Win {
     }
 
     private static boolean checkVerticalLineWin( int[][] board, int indexCell ) {
-        for(int i = 0; i < 5; i++){
-            if( board[i][indexCell] != 1) {
+        for(int i = 0; i < board.length; i++)
+            if (board[i][indexCell] != 1) {
                 return false;
             }
-        }
         return true;
     }
 
     private static boolean checkHorizontalLineWin( int[][] board, int indexRow ) {
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < board.length; i++){
             if( board[indexRow][i] != 1) {
                 return false;
             }
